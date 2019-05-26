@@ -30,8 +30,8 @@ pipeline {
             steps {
                     sshagent(['tomcat-dev']){
                         sh '''
-                            echo "Starting ssh connection"
-
+                            scp -o StrictHostKeyChecking=no target/*.war ec2-user@18.188.211.123:/home/ec2-user/apache-tomcat-7.0.94/webapps/
+                            
                            '''
                     }                
             }
