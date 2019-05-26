@@ -1,3 +1,4 @@
+/*Install Jenkins plugin sshagent before running the pipeline*/
 pipeline {
     agent any
     tools {
@@ -5,14 +6,14 @@ pipeline {
         jdk 'java'
     }
     stages {
-        /*stage ('Initialize') {
+        stage ('Initialize') {
             steps {
                 sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
             }
-        }*/
+        }
 
         stage ('Build') {
             steps {
