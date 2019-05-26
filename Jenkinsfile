@@ -30,7 +30,7 @@ pipeline {
             steps {
                     sshagent(['tomcat-dev']){
                         sh '''
-                            scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.19.197:/opt/
+                            scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.19.197:/opt/apache-tomcat-7.0.94/webapps
 
                            '''
                     }                
