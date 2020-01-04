@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven'
+        jdk 'java'
+    }
     environment {
         branch = 'master'
         scmUrl = 'https://github.com/webster722/webapp-1.git'
